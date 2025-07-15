@@ -11,5 +11,8 @@
         "ms-python.debugpy"
       ]
     }
+  },
+  "containerEnv": {
+    "ENABLE_CLAUDE_SONNET_3_5": "true"
   }
 }
