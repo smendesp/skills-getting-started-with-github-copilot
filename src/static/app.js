@@ -20,22 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
 
-        // Seção de participantes estilizada
+        // Cria a lista de participantes
         let participantsHTML = "";
         if (details.participants.length > 0) {
           participantsHTML = `
-            <div class="participants-section" style="margin-top: 10px; background: #f8f9fa; border-radius: 6px; padding: 8px;">
-              <strong style="display:block; margin-bottom:4px;">Participantes:</strong>
-              <ul class="participants-list" style="margin:0; padding-left:18px;">
-                ${details.participants.map(p => `<li style="margin-bottom:2px;">${p}</li>`).join("")}
+            <div class="participants-section">
+              <strong>Participantes:</strong>
+              <ul class="participants-list">
+                ${details.participants.map(p => `<li>${p}</li>`).join("")}
+
               </ul>
             </div>
           `;
         } else {
           participantsHTML = `
-            <div class="participants-section" style="margin-top: 10px; background: #f8f9fa; border-radius: 6px; padding: 8px;">
-              <strong style="display:block; margin-bottom:4px;">Participantes:</strong>
-              <span class="no-participants" style="color:#888;">Nenhum participante inscrito ainda.</span>
+
+            <div class="participants-section">
+              <strong>Participantes:</strong>
+              <p class="no-participants">Nenhum participante inscrito ainda.</p>
             </div>
           `;
         }
