@@ -28,11 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
               <strong>Participantes:</strong>
               <ul class="participants-list">
                 ${details.participants.map(p => `<li>${p}</li>`).join("")}
+
               </ul>
             </div>
           `;
         } else {
           participantsHTML = `
+
             <div class="participants-section">
               <strong>Participantes:</strong>
               <p class="no-participants">Nenhum participante inscrito ainda.</p>
